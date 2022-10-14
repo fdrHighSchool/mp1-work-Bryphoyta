@@ -19,7 +19,7 @@ public class UserName {
     System.out.print("What is your favorite number? ");
     String favNumber = f.nextLine();
     
-    if(status.equals("Teacher")){ 
+    if((lowerCase(status).equals("teacher"))) { 
         System.out.println(initial(firstName)+lastName+favNumber+"@schools.nyc.gov");
     } //ends if
         else{
@@ -43,5 +43,9 @@ public class UserName {
   public static String initial(String n) {
     return n.substring(0, 1);
   } // end initialize method
+  
+  public static String lowerCase(String d) {
+      return d.toLowerCase();
+  }
 
 } // end class
