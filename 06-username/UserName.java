@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class UserName {
   public static void main(String[] args) {
@@ -26,11 +27,13 @@ public class UserName {
             System.out.println(firstName+initial(lastName)+favNumber+"@nycstudents.net");
     } //ends else
     
-
+    
     
     // test output
     System.out.println("Hello " + initial(firstName) + "." + initial(lastName) + ".");
-
+    
+    generatePassword(8);
+    
     s.close();
   } // end main method
 
@@ -47,5 +50,30 @@ public class UserName {
   public static String lowerCase(String d) {
       return d.toLowerCase();
   }
+    
+   /*
+   * Name: generatePassword
+   * Purpose: generate a random password
+   * Input: length of password (int)
+   * Return: the password (String)
+   */
+  public static String generatePassword(int length) {
+    String password = ("");
+    
+    // loop 'length' times
+    
+    // generate a random number
+    // from 65 - 90 CAPITAL letters
+    // from 97 - 122 lowercase
+    // from 33 - 47 for special characters
+    int cap = (int)(Math.random()*(90-65+1)+65);     
+    char c = (char)cap;
+    
+    // convert the random int to char, ex: c =(char)i;
+    System.out.println(c);
+    // add the char to password
+    
+    return password;
+  } // end generatePassword method
 
 } // end class
